@@ -6,11 +6,6 @@
 # $4 is the comma separated list to pass to ignore
 # $5 is the arguments
 
-if [ ${3,,} = "html" ]; then
-    echo "html output is not supported in the GitHub Action."
-    exit -1
-fi
-
 if [ "$1" = "GITHUB_WORKSPACE" ]; then
     ScanTarget=$GITHUB_WORKSPACE
 else
